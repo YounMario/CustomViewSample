@@ -6,6 +6,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.viewsample.MainActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <com.example.viewsample.widget.DragArea
+            android:id="@+id/drag_area"
+            android:layout_width="48dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/txt_info"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.example.viewsample.widget.DragArea
+            android:layout_width="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/seek_bar"
@@ -48,29 +70,21 @@
 
     </RelativeLayout>
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_margin="16dp"
-        android:layout_marginTop="103dp" />
-
-    <com.example.viewsample.widget.Wheel
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_alignStart="@+id/seekBar"
-        android:layout_below="@+id/seek_bar"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="26dp" />
-
     <com.example.viewsample.widget.Wheel
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_below="@+id/seek_bar"
-        android:layout_alignEnd="@+id/seekBar"
         android:layout_marginTop="26dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp" />
+
+    <com.example.viewsample.widget.Wheel
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/seek_bar"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

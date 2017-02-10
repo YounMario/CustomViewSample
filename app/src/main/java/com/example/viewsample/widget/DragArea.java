@@ -98,7 +98,7 @@ public class DragArea extends View {
             int changedProgress = progress + mProgress;
             mProgress = changedProgress > MAX_VALUE ? MAX_VALUE : changedProgress;
         } else {
-            int changedProgress = progress - mProgress;
+            int changedProgress = mProgress - progress ;
             mProgress = changedProgress < MIN_VALUE ? MIN_VALUE : changedProgress;
         }
     }
