@@ -3,12 +3,9 @@ package com.example.viewsample.widget;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
-import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
@@ -103,12 +100,12 @@ public class DraggerView extends View {
                 lastX = x;
                 lastY = y;
                 if (mHitStart) {
-                    mPointStart.x = (int) Math.max(Math.min(mPointEnd.x - mDragBarRadius * 2, mPointStart.x + dx), getX() + mDragBarRadius);
+                    mPointStart.x = (int) Math.max(Math.min(mPointEnd.x - mDragBarRadius * 2, mPointStart.x + dx), mDragBarRadius);
                     invalidate();
                 }
 
                 if (mHitEnd) {
-                    mPointEnd.x = (int) Math.min(Math.max(mPointStart.x + mDragBarRadius * 2, mPointEnd.x + dx), getX() + getMeasuredWidth() - mDragBarRadius);
+                    mPointEnd.x = (int) Math.min(Math.max(mPointStart.x + mDragBarRadius * 2, mPointEnd.x + dx),getMeasuredWidth() - mDragBarRadius);
                     invalidate();
                 }
 
