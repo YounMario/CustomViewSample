@@ -82,7 +82,7 @@ public class Wheel extends View {
         int cx = getWidth() /2;
         int cy = getHeight() /2;
         int circleRadius = getWidth() /2;
-        canvas.drawRect(mBoundRect, mPaint);
+        //canvas.drawRect(mBoundRect, mPaint);
         canvas.rotate(mDegree, cx, cy);
 
         //paint shadow
@@ -97,10 +97,6 @@ public class Wheel extends View {
         canvas.translate(translateX, 0);
         canvas.drawCircle(mInnerCircleRadius, cy, mInnerCircleRadius, mPaint);
         canvas.restore();
-
-
-
-
     }
 
 

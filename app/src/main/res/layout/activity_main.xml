@@ -8,6 +8,7 @@
     tools:context="com.example.viewsample.MainActivity">
 
     <RelativeLayout
+        android:id="@+id/seek_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
@@ -27,9 +28,9 @@
             android:id="@+id/drag_view"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:padding="10dp"
             android:layout_toLeftOf="@+id/txt_start_end"
             android:layout_toRightOf="@+id/txt_start_time"
+            android:padding="10dp"
             app:between_color="@color/colorAccent"
             app:drag_bar_color="@color/colorPrimaryDark"
             app:progress_bar_color="@color/colorPrimary" />
@@ -46,6 +47,30 @@
             android:text="00:00:10" />
 
     </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:layout_marginTop="103dp" />
+
+    <com.example.viewsample.widget.Wheel
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignStart="@+id/seekBar"
+        android:layout_below="@+id/seek_bar"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="26dp" />
+
+    <com.example.viewsample.widget.Wheel
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/seek_bar"
+        android:layout_alignEnd="@+id/seekBar"
+        android:layout_marginTop="26dp"
+        android:layout_marginRight="16dp" />
 
 
 </RelativeLayout>
